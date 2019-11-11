@@ -29,8 +29,26 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 /* by default immediate flex's children are flex items*/
 .container {
-  display:flex; /* whole width*/
-  /* display: inline-flex; wrap around the content - e.g. fit width */
+  display:flex;
   border:10px solid goldenrod;
   height:100vh; /*viewport height - kind of height 100%*/
+  align-items: flex-start;
+}
+
+.box {
+  width: 33.333%;
+}
+
+.box2 {
+  padding-bottom: 200px;;
+}
+
+.box6 {
+  padding-bottom: 0;;
+}
+
+.box9 {
+  padding-bottom: 50px;
+  /* align-self: flex-end; => if the default alignment is to the top - this will be the only one moved to the bottom of the page */
+  align-self: flex-end;
 }
