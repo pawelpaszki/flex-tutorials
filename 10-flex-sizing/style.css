@@ -9,7 +9,7 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 /* Some default styles to make each box visible */
 .box {
   color:white;
-  font-size: 100px;
+  font-size: 50px;
   text-align: center;
   text-shadow:4px 4px 0 rgba(0,0,0,0.1);
   padding:10px;
@@ -27,9 +27,17 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 .box9 { background:#2ecc71;}
 .box10 { background:#16a085;}
 
-/* by default immediate flex's children are flex items*/
+
+/* We start writing out flexbox here. The above is just page setup */
 .container {
   display:flex;
-  border:10px solid goldenrod;
-  align-items: flex-start;
+}
+
+.box {
+  flex: 1;
+  /* flex:1; => taking up exact amount of space (if smalles than the content) */
+}
+
+.box2 {
+  flex:2;
 }
