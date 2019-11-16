@@ -43,16 +43,39 @@ a:hover {
   list-style: none;
   margin: 0;
   padding: 0;
-  
+  display: flex;
 }
 
+/* .flex-nav li - Flex Item  // applies to all items in the li */
+.flex-nav li {
+  flex: 3;
+}
+
+/* Overrides values for .social */
+.flex-nav .social {
+  flex: 1;
+}
 
 @media all and (max-width:1000px) {
   
+  .flex-nav ul {
+    flex-wrap: wrap; /* width needed for this to take effect */
+  }
+
+  .flex-nav li {
+    flex: 1 1 50%; /* 50% wide + 1 for shrink and grow */
+  }
+
+  .flex-nav .social {
+    flex: 1 1 25%; /* 50% wide + 1 for shrink and grow */
+  }
 
 }
 
 @media all and (max-width:500px) {
   
+  .flex-nav li {
+    flex-basis: 100%; /* 50% wide + 1 for shrink and grow */
+  }
 
 }
